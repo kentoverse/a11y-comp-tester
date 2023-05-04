@@ -1,7 +1,6 @@
 const { AxePuppeteer } = require('@axe-core/puppeteer');
 const puppeteer = require('puppeteer');
 const { writeFile } = require('fs');
-// const argv = require('minimist')(process.argv.slice(2));
 
 const { program } = require('commander');
 program
@@ -9,7 +8,7 @@ program
     .option('-c, --comp, --component  <value>', 'Component CSS selector to be analized. Example: ".nl-filters", "header", "footer"')
     .option('-o, --output <value>', 'Output file name')
     .name('a11y-test')
-    .description('a11y-test is an accessibility Node.Js command for automated accessibility testing of websites and other HTML-based user interfaces.)
+    .description('a11y-test is an accessibility Node.Js command for automated accessibility testing of websites and other HTML-based user interfaces.')
     .version('0.0.1');
 
 program.parse(process.argv);
@@ -30,7 +29,6 @@ console.log(`Writing results in: ${output}`);
 (async () => {
     const browser = await puppeteer.launch({ headless: 'new'});
     const page = await browser.newPage();
-    // await page.setBypassCSP(true);
 
     await page.goto(options.url);
 
