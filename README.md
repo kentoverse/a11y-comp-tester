@@ -4,6 +4,7 @@ a11y-test is an accessibility Node.Js command for automated accessibility testin
 
 ## Getting started
 First download the package
+`git clone https://innersource.accenture.com/users/hector.a.rodriguez/repos/a11y-test/browse`
 
 Now install all the packages 
 `npm install`
