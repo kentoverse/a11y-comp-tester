@@ -1,0 +1,20 @@
+{
+  "name": "axe-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node a11y-test.js",
+    "start": "node a11y-test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^20.1.0"
+  },
+  "devDependencies": {
+    "@axe-core/puppeteer": "^4.7.0",
+    "commander": "^10.0.1"
+  }
+}
