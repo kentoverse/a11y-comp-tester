@@ -15,6 +15,9 @@ Finally run the command line
 To get help on the command use
 `npm a11y-test.js --help`
 
+## Example usage
+`node a11y-test.js -u "http://www.canadiantire.ca" -c "footer" -o footer.json`
+
 
 ## Usage
 Options:  
