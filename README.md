@@ -17,8 +17,8 @@ To get help on the command use
 
 ## Usage
 Options:
-  -u, --url <value>                 Page URL to be scanned
-  -c, --comp, --component  <value>  Component CSS selector to be analized. Example: ".nl-filters", "header", "footer"
-  -o, --output <value>              Output file name
-  -V, --version                     output the version number
-  -h, --help                        display help for command
+`  -u, --url <value>`                 Page URL to be scanned
+`  -c, --comp, --component  <value>`  Component CSS selector to be analized. Example: ".nl-filters", "header", "footer"
+`  -o, --output <value>`              Output file name
+`  -V, --version`                     output the version number
+`  -h, --help`                        display help for command
