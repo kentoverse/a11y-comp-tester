@@ -10,10 +10,13 @@ Now install all the packages
 `npm install`
 
 Finally run the command line
-`npm a11y-test.js`
+`node a11y-test.js`
 
 To get help on the command use
-`npm a11y-test.js --help`
+`node a11y-test.js --help`
+
+Example of a command line
+`node  a11y-test.js -u http://www.canadiantire.ca -c footer -o dist/result.json`
 
 
 ## Usage
