@@ -23,52 +23,25 @@ program
 
 program.parse(process.argv);
 const options = program.opts();
-if (!options.url) {
-    console.log('No paramaters passed, please give a url')
-    return false;
-}
 
 
 const url = options.url ? options.url : 'http://www.canadiantire.ca';
 console.log(`Inspecting ${url}`);
 
 let comp = options.comp ? options.comp : 'body'; 
-console.log(`HTML/Component selector: "${options.comp}"`);
+console.log(`HTML/Component selector: "${comp}"`);
 
 const output = options.output ? options.output : 'dist/results.json';
 console.log(`Writing results in: ${output}`);
 
-<<<<<<< HEAD
-=======
-(async () => {
-    const browser = await puppeteer.launch({ headless: 'new'});
-    const page = await browser.newPage();
-
-    await page.goto(options.url);
-
-    const results = await new AxePuppeteer(page)
-        .include(options.comp)
-        .withTags(['wcag2a', 'wcag2aa'])
-        .analyze();
->>>>>>> main
-
-
-let writeResults = () => {
-     fs.writeFile(output, JSON.stringify(results, null, 2), (error) => {
-            if (error) {
-                console.log('An error has ocurred', error);
-                return;
-            }
-        })
-}
 
 // SPECIFIC TEST FROM HERE
 // Testing Store Locator Button
 // Selector: .nl-primary-navigation .nl-store-locator--section-button'
-const screenshot = 'dist/canadiantire_store_flyout.png'
+const screenshot = `dist/a11y-${comp}.png`
 try {
     (async () => {
-        const browser = await puppeteer.launch({ headless: false })
+        const browser = await puppeteer.launch({ headless: 'new' })
         const page = await browser.newPage()
         await page.setViewport({ width: 1280, height: 800 })
         await page.goto(url);
@@ -83,8 +56,6 @@ try {
         await page.click('.nl-primary-navigation-bar .nl-store-locator--section-button')
         await page.waitForSelector('.nl-store-selector-flyout__container')
         await page.screenshot({ path: screenshot })
-
-
 
         // Execute Axe
         let secondElement = '.nl-store-selector-flyout__container'

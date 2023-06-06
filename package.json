@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node a11y-test.js",
+    "test": "node a11y-test.js -u http://www.canadiantire.ca -c footer -o dist/footer.json",
     "start": "node a11y-test.js",
     "jest": "jest"
   },
@@ -17,9 +17,6 @@
   "devDependencies": {
     "@axe-core/puppeteer": "^4.7.0",
     "commander": "^10.0.1",
-    "jest": "^29.5.0",
-    "jest-axe": "^7.0.1",
-    "jest-environment-jsdom": "^29.5.0",
-    "jest-puppeteer": "^9.0.0"
+    "jest": "^29.5.0"
   }
 }
