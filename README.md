@@ -28,7 +28,8 @@ Options:
 `  -h, --help`                        display help for command  
 
 
-
+## Output
+Running test scripts will  generate 1 x screenshot images and 1x `.json` file for eacth test inside the `dist` folder
 ## JEST
 Run a single test scenario (for example: Store Flyout)
 `npx jest -t "Store Flyout"`
