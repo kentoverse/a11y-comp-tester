@@ -18,6 +18,9 @@ To get help on the command use
 Example of a command line
 `node  a11y-test.js -u http://www.canadiantire.ca -c footer -o dist/result.json`
 
+## Example usage
+`node a11y-test.js -u "http://www.canadiantire.ca" -c "footer" -o footer.json`
+
 
 ## Usage
 Options:  

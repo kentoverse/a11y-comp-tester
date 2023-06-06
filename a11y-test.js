@@ -38,6 +38,19 @@ console.log(`HTML/Component selector: "${options.comp}"`);
 const output = options.output ? options.output : 'dist/results.json';
 console.log(`Writing results in: ${output}`);
 
+<<<<<<< HEAD
+=======
+(async () => {
+    const browser = await puppeteer.launch({ headless: 'new'});
+    const page = await browser.newPage();
+
+    await page.goto(options.url);
+
+    const results = await new AxePuppeteer(page)
+        .include(options.comp)
+        .withTags(['wcag2a', 'wcag2aa'])
+        .analyze();
+>>>>>>> main
 
 
 let writeResults = () => {
