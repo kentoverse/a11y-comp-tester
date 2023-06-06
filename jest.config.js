@@ -1,4 +1,5 @@
 module.exports = {
-    // "testEnvironment": "jsdom",
-    "preset": "jest-puppeteer"
-}
+    verbose: true,
+    setupFilesAfterEnv: ["<rootDir>/__tests__/jest_preload.js"],
+    testMatch: ["/**/*.test.js"],
+};

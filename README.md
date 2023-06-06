@@ -10,10 +10,13 @@ Now install all the packages
 `npm install`
 
 Finally run the command line
-`npm a11y-test.js`
+`node a11y-test.js`
 
 To get help on the command use
-`npm a11y-test.js --help`
+`node a11y-test.js --help`
+
+Example of a command line
+`node  a11y-test.js -u http://www.canadiantire.ca -c footer -o dist/result.json`
 
 ## Example usage
 `node a11y-test.js -u "http://www.canadiantire.ca" -c "footer" -o footer.json`
@@ -26,3 +29,26 @@ Options:
 `  -o, --output <value>`              Output file name  
 `  -V, --version`                     output the version number  
 `  -h, --help`                        display help for command  
+
+
+## Output
+Running test scripts will  generate 1 x screenshot images and 1x `.json` file for eacth test inside the `dist` folder
+## JEST
+Run a single test scenario (for example: Store Flyout)
+`npx jest -t "Store Flyout"`
+
+Run a single test scenario (for example: PLP page)
+`npx jest -t plp`
+or
+`npx jest -t homepage`
+
+Run a jest file
+`npx jest __tests__/store-selector-flyout.test.js`
+
+Run all tests  
+`npm run jest`
+
+
+## Documentation
+- [Jest Timeout Error](https://bobbyhadz.com/blog/jest-exceeded-timeout-of-5000-ms-for-test)
+- [Jest for React](https://aaron-kt-berry.medium.com/a11y-testing-with-axe-core-eb074744e073)
